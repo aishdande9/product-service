@@ -3,15 +3,9 @@ package problems;
 
 public class CountWords {
     public static void main(String[] args) {
-        String sentence = "I love Java";
-
-
-        String[] words = sentence.split("  ");
-for(int i= words.length-1;i>=0;i--){
-    System.out.print(words[i]);
-
-
-}
+        String sentence = "I am learning Java";
+        String[] words = sentence.trim().split("\\s+");
+        System.out.println(words.length);
 
     }
 }
