@@ -1,26 +1,26 @@
 package problems;
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class RemoveDuplicates {
     public static void main(String[] args) {
-        List<Integer> nums = new ArrayList<>(Arrays.asList(1, 2, 2, 3, 1));
-
-        System.out.println(rmvDuplicates(nums));
+        System.out.println(removeDuplicates(Arrays.asList(4, 2, 4, 7, 2, 9)));
     }
 
-    public static List<Integer> rmvDuplicates(List<Integer> nums){
+    public static List<Integer> removeDuplicates(List<Integer> numbers) {
 
-        List<Integer> result = new ArrayList<>();
-        for(int i=0;i<nums.size();i++){
-            if(!result.contains(nums.get(i))){
-                result.add(nums.get(i));
-            }
-
-        }
-
-        return result;
+        List<Integer> newList = new ArrayList<>();
+for(int i = 0;i <numbers.size();i++){
+    if(!newList.contains(numbers.get(i))){
+        newList.add(numbers.get(i));
     }
 }
+
+return newList;
+    }
+}
+
+
