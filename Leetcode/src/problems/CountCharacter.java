@@ -5,24 +5,30 @@ import java.util.Map;
 
 public class CountCharacter {
     public static void main(String[] args) {
-String str = "banana";
 
-        System.out.println(returnCharacterCount(str));
-    }
+        String word = "hello";
+        System.out.println(countCharacters(word));
+}
 
-    public static Map<Character,Integer> returnCharacterCount(String str) {
-        Map<Character, Integer> map = new HashMap<>();
 
-        for (char c : str.toCharArray()) {
-            if (map.containsKey(c)) {
-                map.put(c, map.get(c) + 1);
+public static Map<Character,Integer> countCharacters(String word){
 
-            } else {
-                map.put(c, 1);
-            }
 
+        HashMap<Character,Integer> map = new HashMap<>();
+
+     char[] letter = word.toCharArray();
+    for(char i :letter){
+
+        if(map.containsKey(i)){
+       map.put(i, map.get(i)+1);
+
+        }else{
+            map.put(i,1);
         }
+     }
+return map;
+}
 
-        return map;
 
-    }}
+}
+
